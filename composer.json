@@ -1,28 +1,20 @@
 {
   "name": "maximiwrk/translation",
   "type": "library",
-  "description": "DB-backed translation loader for Laravel 11/12",
-  "license": "MIT",
   "require": {
     "php": "^8.1|^8.2|^8.3|^8.4",
     "illuminate/support": "^11.0|^12.0",
     "illuminate/translation": "^11.0|^12.0",
     "illuminate/database": "^11.0|^12.0",
-    "symfony/translation": "^6.4|^7.0",
-    "doctrine/dbal": "^4.1"
+    "symfony/translation": "^6.4|^7.0"
   },
-  "autoload": {
-    "psr-4": {
-      "Waavi\\Translation\\": "src/"
-    }
-  },
+  "autoload": { "psr-4": { "Waavi\\Translation\\": "src/" } },
   "extra": {
     "laravel": {
-      "providers": [
-        "Waavi\\Translation\\TranslationServiceProvider"
-      ]
+      "providers": ["Waavi\\Translation\\TranslationServiceProvider"]
     }
   },
+  "replace": { "waavi/translation": "*" },
   "minimum-stability": "stable",
   "prefer-stable": true
 }
